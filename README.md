@@ -116,6 +116,6 @@ Este sistema fue diseñado para ayudar a operadores de estaciones de servicio a:
 
 ## Créditos y contacto
 
-Desarrollado por: [Tu nombre / equipo]  
+Desarrollado por: [FREDY APOLINARIO ALCOCER / equipo]  
 Fecha: Junio 2025  
-Contacto: [correo@example.com]
+Contacto: [fredyapolinario78@hotmail.com]
