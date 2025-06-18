@@ -2,22 +2,23 @@ import mysql.connector
 import pandas as pd
 from fpdf import FPDF
 
-# PARÁMETROS A CAMBIAR
+# CONFIGURACIÓN DE CONEXIÓN A MYSQL
 DB_CONFIG = {
     'host': 'localhost',
-    'user': 'root',         # 👈 CAMBIA
-    'password': 'Sistemas321',  # 👈 CAMBIA
+    'user': 'root',         # 👈 CAMBIA ESTO
+    'password': 'Sistemas321',  # 👈 CAMBIA ESTO
     'database': 'gasolinas1',
     'charset': 'utf8mb4',
     'collation': 'utf8mb4_general_ci'
 }
 
-estacion_id = 3       # Ej: America Soler
-producto_id = 1       # Ej: GLP
+# FILTROS DEL REPORTE
+estacion_id = 3       # America Soler
+producto_id = 2       # GLP
 anio = 2025
 mes = 3
 
-# CONECTAR Y CONSULTAR
+# CONEXIÓN Y CONSULTA
 conn = mysql.connector.connect(**DB_CONFIG)
 query = """
 SELECT
@@ -41,7 +42,7 @@ ORDER BY d.fecha
 df = pd.read_sql(query, conn, params=(estacion_id, producto_id, anio, mes))
 conn.close()
 
-# CREAR PDF
+# CLASE PDF PERSONALIZADA
 class PDF(FPDF):
     def header(self):
         self.set_font("Arial", "B", 14)
@@ -61,16 +62,17 @@ class PDF(FPDF):
 
     def table_row(self, row):
         self.set_font("Arial", "", 8)
-        self.cell(25, 6, str(row['fecha'].date()), border=1)
-        self.cell(25, 6, f"{row['compra_planta']:.2f}", border=1)
-        self.cell(25, 6, f"{row['prueba_surtidor']:.2f}", border=1)
-        self.cell(25, 6, f"{row['total_ventas']:.2f}", border=1)
-        self.cell(25, 6, f"{row['invent_final']:.2f}", border=1)
-        self.cell(25, 6, f"{row['varillaje_inicial']:.2f}", border=1)
-        self.cell(25, 6, f"{row['varillaje_final']:.2f}", border=1)
-        self.cell(25, 6, f"{row['dif']:.2f}", border=1)
+        self.cell(25, 6, str(row['fecha']), border=1)
+        self.cell(25, 6, f"{row['compra_planta']:.2f}" if pd.notna(row['compra_planta']) else "", border=1)
+        self.cell(25, 6, f"{row['prueba_surtidor']:.2f}" if pd.notna(row['prueba_surtidor']) else "", border=1)
+        self.cell(25, 6, f"{row['total_ventas']:.2f}" if pd.notna(row['total_ventas']) else "", border=1)
+        self.cell(25, 6, f"{row['invent_final']:.2f}" if pd.notna(row['invent_final']) else "", border=1)
+        self.cell(25, 6, f"{row['varillaje_inicial']:.2f}" if pd.notna(row['varillaje_inicial']) else "", border=1)
+        self.cell(25, 6, f"{row['varillaje_final']:.2f}" if pd.notna(row['varillaje_final']) else "", border=1)
+        self.cell(25, 6, f"{row['dif']:.2f}" if pd.notna(row['dif']) else "", border=1)
         self.ln()
 
+# GENERAR PDF
 pdf = PDF()
 pdf.add_page()
 pdf.table_header()
@@ -80,3 +82,5 @@ for _, row in df.iterrows():
 
 pdf.output("reporte_producto_estacion.pdf")
 print("✅ PDF generado: reporte_producto_estacion.pdf")
+
+
