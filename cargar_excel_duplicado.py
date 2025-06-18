@@ -1,6 +1,7 @@
 import pandas as pd
 import mysql.connector
 import os
+from datetime import datetime  # <-- Agregado para registrar logs
 
 # Configuración conexión a BD (base y tablas ya creadas)
 DB_CONFIG = {
@@ -16,7 +17,6 @@ DB_CONFIG = {
 RUTA_BASE_EXCEL = r'C:\Users\fedy\Desktop\gasolinas'
 
 def agregar_estaciones(estaciones):
-    """Inserta estaciones si no existen."""
     try:
         conn = mysql.connector.connect(**DB_CONFIG)
         cursor = conn.cursor()
@@ -33,7 +33,6 @@ def agregar_estaciones(estaciones):
         print(f"❌ Error insertando estaciones: {e}")
 
 def obtener_estaciones():
-    """Obtiene estaciones (id, nombre) de la BD."""
     try:
         conn = mysql.connector.connect(**DB_CONFIG)
         cursor = conn.cursor()
@@ -58,6 +57,7 @@ def cargar_inventario_estacion(estacion_id, nombre_estacion):
         cursor = conn.cursor()
         xls = pd.ExcelFile(archivo_excel)
         registros_procesados = 0
+        ultima_fecha = None
 
         for nombre_hoja in xls.sheet_names:
             try:
@@ -66,8 +66,8 @@ def cargar_inventario_estacion(estacion_id, nombre_estacion):
                     print(f"⚠️ Hoja '{nombre_hoja}' no contiene una fecha válida.")
                     continue
                 fecha = fecha.date()
+                ultima_fecha = fecha
 
-                # Verificar si ya existen datos para esa estación y fecha
                 cursor.execute("""
                     SELECT COUNT(*) FROM inventario
                     WHERE estacionid = %s AND fecha = %s
@@ -85,7 +85,6 @@ def cargar_inventario_estacion(estacion_id, nombre_estacion):
                         """, (estacion_id, fecha))
                         print(f"🗑️ Registros anteriores eliminados para la fecha {fecha}.")
 
-                # Cargar DataFrame
                 df = pd.read_excel(xls, sheet_name=nombre_hoja, skiprows=6, nrows=4, header=None)
                 df = df.iloc[:, [0, 12, 13, 14]]
                 df.columns = ['producto', 'cantidad', 'precio_venta', 'venta_soles']
@@ -122,12 +121,17 @@ def cargar_inventario_estacion(estacion_id, nombre_estacion):
         cursor.close()
         conn.close()
         print(f"  ✅ Estación procesada. Registros cargados: {registros_procesados}")
+
+        # ✅ Guardar registro en el log si se cargaron datos
+        if registros_procesados > 0 and ultima_fecha:
+            with open("log_procesos.txt", "a", encoding="utf-8") as f:
+                f.write(f"{datetime.now()} - Estación {nombre_estacion} - Fecha {ultima_fecha} - Registros cargados: {registros_procesados}\n")
+
         return True
 
     except Exception as e:
         print(f"❌ Error procesando estación '{nombre_estacion}': {e}")
         return False
-
 
 def procesar_todas_las_estaciones():
     estaciones = obtener_estaciones()
@@ -148,12 +152,10 @@ def procesar_todas_las_estaciones():
     print(f"❌ Fallidas: {fallidas}")
 
 if __name__ == "__main__":
-    # Si quieres agregar estaciones nuevas, ponlas aquí:
     estaciones_ejemplo = [
         (1, 'La Rinconada', 'Av. Principal s/n', 'lima'),
         (2, 'America Soler', 'Av. Bolognesi s/n', 'trujillo'),
         (3, 'El Porvenir', 'Av. Porvenir s/n', 'trujillo')
-       
     ]
     agregar_estaciones(estaciones_ejemplo)
     procesar_todas_las_estaciones()

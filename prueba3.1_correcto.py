@@ -13,7 +13,7 @@ DB_CONFIG = {
 }
 
 # Ruta base con archivos Excel
-RUTA_BASE_EXCEL = r'C:\Users\sistemas\Desktop\gasolinas'
+RUTA_BASE_EXCEL = r'C:\Users\fedy\Desktop\gasolinas'
 
 def agregar_estaciones(estaciones):
     """Inserta estaciones si no existen."""

@@ -77,10 +77,18 @@ def main():
 
         if not df.empty:
             generar_pdf(df, fecha_inicio, fecha_fin)
+            # Loguear el proceso
+            with open("log_procesos.txt", "a", encoding="utf-8") as f:
+                f.write(f"{datetime.now()} - Reporte PDF generado del {fecha_inicio} al {fecha_fin} - Registros: {len(df)}\n")
         else:
             print("⚠️ No se encontraron datos en ese rango de fechas.")
+            with open("log_procesos.txt", "a", encoding="utf-8") as f:
+                f.write(f"{datetime.now()} - Reporte PDF intentado del {fecha_inicio} al {fecha_fin} - Sin datos\n")
+
     except Exception as e:
         print(f"❌ Error: {e}")
+        with open("log_procesos.txt", "a", encoding="utf-8") as f:
+            f.write(f"{datetime.now()} - Error generando reporte PDF: {e}\n")
 
 if __name__ == "__main__":
     main()
