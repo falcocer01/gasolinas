@@ -5,6 +5,14 @@ Este proyecto tiene como objetivo centralizar y automatizar el proceso de carga 
 ---
 
 ## Contenido del proyecto
+## 🔧 Funcionalidades
+
+- ✅ Carga automatizada de archivos Excel por estación.
+- ✅ Registro de productos: GLP, PREMIUM, REGULAR y DB5.
+- ✅ Inserción en base de datos MariaDB.
+- ✅ Generación de reportes PDF diarios por estación.
+- ✅ Diagrama de flujo del proceso.
+- ✅ Script de respaldo (`backup.sh`) para la base de datos.
 
 ### 1. Backup de la Base de Datos
 
