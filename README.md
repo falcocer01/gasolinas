@@ -94,7 +94,7 @@ Todos los reportes incluyen:
 - `america_soler.jpg`, `rinconada.jpg`, `porvenir.jpg`: Imagen de cada estación para uso en documentación o interfaz.
 - ![Imagen github America](./imagenes/america soler.png)
 - ![Imagen Rinconada](rinconada.png)
-- ![Imagen github Porvenir](./img/github_image.png)
+- ![Imagen github Porvenir](Porvenir.png)
 - ![america_soler](imagenes/america_soler.png)
 ---
 
