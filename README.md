@@ -98,7 +98,7 @@ Columnas clave importadas:
 
 ### Ejemplos:
 - `reporte_America_Soler_GLP_2025_03.pdf`
-- [archivo.txt](reporte_America_Soler_DB5_2025_03.pdf)
+- ![Imagen america](reporte_america.png)
 - `reporte_La_Rinconada_PREMIUM_2025-03-01_a_2025-03-31.xlsx`
 
 Todos los reportes incluyen:
