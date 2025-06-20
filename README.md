@@ -146,6 +146,6 @@ Este sistema fue diseñado para ayudar a operadores de estaciones de servicio a:
 
 ## Créditos y contacto
 
-Desarrollado por: [FREDY APOLINARIO ALCOCER / equipo]  
+Desarrollado por: FREDY APOLINARIO ALCOCER  
 Fecha: Junio 2025  
-Contacto: [fredyapolinario78@hotmail.com]
+Contacto: fredyapolinario78@hotmail.com
