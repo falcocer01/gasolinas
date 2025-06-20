@@ -92,7 +92,9 @@ Todos los reportes incluyen:
 
 - `relaciones_bd.png`: Diagrama relacional de la base de datos `gasolinas1`.
 - `america_soler.jpg`, `rinconada.jpg`, `porvenir.jpg`: Imagen de cada estación para uso en documentación o interfaz.
-
+- ![Imagen github America](./img/github_image.png)
+- ![Imagen github Rinconada](./img/github_image.png)
+- ![Imagen github America Soler](./img/github_image.png)
 ---
 
 ## Requisitos del entorno
