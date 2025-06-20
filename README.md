@@ -14,6 +14,24 @@ Este proyecto tiene como objetivo centralizar y automatizar el proceso de carga 
 - ✅ Diagrama de flujo del proceso.
 - ✅ Script de respaldo (`backup.sh`) para la base de datos.
 
+- 📂 Estructura del Proyecto
+  
+  ```
+gasolinas/
+├── estaciones/               # Archivos Excel por estación
+├── src/                      # Código fuente
+│   ├── cargar_excel.py       # Script para cargar datos desde Excel
+│   ├── generar_pdf.py        # Script para generar reporte en PDF
+│   ├── backup.sh             # Script para hacer backup de la BD
+├── imagenes/
+│   ├── diagrama_flujo.png    # Diagrama de flujo del sistema
+│   └── imagenes estacion
+├── reports/                  # Reportes PDF generados
+├── backups/                  # Backups de la base de datos
+├── README.md
+├── requirements.txt
+└── crear_tablas.sql          # Script para crear estructura de la base de datos
+
 ### 1. Backup de la Base de Datos
 
 - `gasolina1_18-06-2025.sql`: Backup completo de la base de datos `gasolinas1` que contiene las siguientes tablas:
