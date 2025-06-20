@@ -16,7 +16,7 @@ Este proyecto tiene como objetivo centralizar y automatizar el proceso de carga 
 
 - 📂 Estructura del Proyecto
   
-  ```
+```
 gasolinas/
 ├── estaciones/               # Archivos Excel por estación
 ├── src/                      # Código fuente
@@ -31,6 +31,7 @@ gasolinas/
 ├── README.md
 ├── requirements.txt
 └── crear_tablas.sql          # Script para crear estructura de la base de datos
+```
 
 ### 1. Backup de la Base de Datos
 
