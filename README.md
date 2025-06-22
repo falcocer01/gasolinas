@@ -5,6 +5,33 @@ Este proyecto tiene como objetivo centralizar y automatizar el proceso de carga 
 ---
 
 ## Contenido del proyecto
+## 🔧 Funcionalidades
+
+- ✅ Carga automatizada de archivos Excel por estación.
+- ✅ Registro de productos: GLP, PREMIUM, REGULAR y DB5.
+- ✅ Inserción en base de datos MariaDB.
+- ✅ Generación de reportes PDF diarios por estación.
+- ✅ Diagrama de flujo del proceso.
+- ✅ Script de respaldo (`backup.sh`) para la base de datos.
+
+- 📂 Estructura del Proyecto
+  
+```
+gasolinas/
+├── estaciones/               # Archivos Excel por estación
+├── src/                      # Código fuente
+│   ├── cargar_excel.py       # Script para cargar datos desde Excel
+│   ├── generar_pdf.py        # Script para generar reporte en PDF
+│   ├── backup.sh             # Script para hacer backup de la BD
+├── imagenes/
+│   ├── diagrama_flujo.png    # Diagrama de flujo del sistema
+│   └── imagenes estacion
+├── reports/                  # Reportes PDF generados
+├── backups/                  # Backups de la base de datos
+├── README.md
+├── requirements.txt
+└── crear_tablas.sql          # Script para crear estructura de la base de datos
+```
 
 ### 1. Backup de la Base de Datos
 
@@ -71,6 +98,7 @@ Columnas clave importadas:
 
 ### Ejemplos:
 - `reporte_America_Soler_GLP_2025_03.pdf`
+- ![Imagen america](reporte_america.png)
 - `reporte_La_Rinconada_PREMIUM_2025-03-01_a_2025-03-31.xlsx`
 
 Todos los reportes incluyen:
@@ -84,7 +112,11 @@ Todos los reportes incluyen:
 
 - `relaciones_bd.png`: Diagrama relacional de la base de datos `gasolinas1`.
 - `america_soler.jpg`, `rinconada.jpg`, `porvenir.jpg`: Imagen de cada estación para uso en documentación o interfaz.
-
+- ![Imagen Rinconada](rinconada.png)
+  
+- ![Imagen github Porvenir](Porvenir.png)
+  
+- ![america_soler](america_soler.png)
 ---
 
 ## Requisitos del entorno
@@ -116,6 +148,6 @@ Este sistema fue diseñado para ayudar a operadores de estaciones de servicio a:
 
 ## Créditos y contacto
 
-Desarrollado por: [FREDY APOLINARIO ALCOCER / equipo]  
+Desarrollado por: FREDY APOLINARIO ALCOCER  
 Fecha: Junio 2025  
-Contacto: [fredyapolinario78@hotmail.com]
+Contacto: fredyapolinario78@hotmail.com
