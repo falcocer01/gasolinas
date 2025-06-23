@@ -158,4 +158,4 @@ Este sistema fue diseñado para ayudar a operadores de estaciones de servicio a:
 Desarrollado por: FREDY APOLINARIO ALCOCER  
 Fecha: Junio 2025  
 Contacto: fredyapolinario78@hotmail.com
- [GitHub - Apolinario03](https://github.com/Apolinario03)
+[GitHub - falcocer01](https://github.com/falcocer01/gasolinas.git)
