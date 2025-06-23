@@ -154,8 +154,10 @@ def procesar_excel(nombre_archivo):
 
 # USO PRINCIPAL
 if __name__ == "__main__":
-    archivos = glob("*.xlsx")
-    if not archivos:
-        print("⚠️ No se encontró ningún archivo .xlsx en el directorio.")
+    archivo = input("📥 Ingrese el nombre del archivo Excel a procesar (incluya .xlsx): ").strip()
+
+    if not os.path.exists(archivo):
+        print(f"❌ El archivo '{archivo}' no se encontró en el directorio actual.")
     else:
-        procesar_excel(archivos[0])
+        procesar_excel(archivo)
+
