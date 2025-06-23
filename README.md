@@ -150,11 +150,8 @@ Este sistema fue diseñado para ayudar a operadores de estaciones de servicio a:
 - Detectar diferencias de inventario.
 - Presentar reportes confiables a entes reguladores como OSINERGMIN.
 - Optimizar el proceso de consolidación de datos multiestación.
-
 ---
-
 ## Créditos y contacto
-
 Desarrollado por: FREDY APOLINARIO ALCOCER  
 Fecha: Junio 2025  
 Contacto: fredyapolinario78@hotmail.com
