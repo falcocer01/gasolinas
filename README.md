@@ -53,6 +53,14 @@ Versión extendida del anterior que procesa automáticamente todos los archivos 
 
 #### c. `generar_reporte_osinergmi_pdf.py`
 Genera un reporte mensual detallado de un producto para una estación específica en formato PDF.
+si quiere un reporte de otro producto o de otra estacion aqui puedes cambiar que se encuentra en el script:
+
+# FILTROS DEL REPORTE
+estacion_id = 3       # America Soler
+producto_id = 2       # GLP
+anio = 2025
+mes = 3
+Nota: cambia el id de la estacion, id producto,  año y mes que usted requiere. 
 
 #### d. `generar_reporte_pdf_interactivo.py`
 Script de consola que permite al usuario elegir:
