@@ -49,7 +49,7 @@ gasolinas/
 Script que carga un archivo Excel mensual (una hoja por día) a la base de datos. Inserta datos en las tablas `ventas` y `detalle_dia` y evita duplicados mediante `archivos_procesados`.
 
 #### b. `procesar_varios_excel.py`
-Versión extendida del anterior que procesa automáticamente todos los archivos `.xlsx` del directorio para distintas estaciones.
+Versión extendida del anterior que procesa automáticamente todos los archivos `.xlsx` del directorio para distintas estaciones muestra el ingreso en la tabla detalles_dia (exporta variaos exceles de varias estaciones).
 
 #### c. `generar_reporte_osinergmi_pdf.py`
 Genera un reporte mensual detallado de un producto para una estación específica en formato PDF.
