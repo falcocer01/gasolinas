@@ -111,7 +111,7 @@ Todos los reportes incluyen:
 ## Recursos visuales
 
 - `relaciones_bd.png`: Diagrama relacional de la base de datos `gasolinas1`.
-- ![Imagen diagrana flujo](ds)
+- ![Imagen diagrana flujo](diagrama de flujo.png)
 - `america_soler.jpg`, `rinconada.jpg`, `porvenir.jpg`: Imagen de cada estación para uso en documentación o interfaz.
 - ![Imagen Rinconada](rinconada.png)
   
