@@ -46,16 +46,25 @@ gasolinas/
 ### 2. Scripts Python
 
 #### a. `cargar_excel_a_mysql.py`
-Script que carga un archivo Excel mensual (una hoja por día) a la base de datos. Inserta datos en las tablas `ventas` y `detalle_dia` y evita duplicados mediante `archivos_procesados`.
+Script que carga un archivo Excel mensual (una hoja por día) a la base de datos. Inserta datos en las tablas `ventas` y `detalle_dia` y evita duplicados mediante `archivos_procesados`.Ingresa en la tabla ventas la cantidad de ventas  en galones vendido de dia de cada producto,carga la tabla delalles_dia con los campos requerida para el reporte de osinergmin, una vez procesado el archivo excel ya no deja ingresar nuevamente el mismo archivo por que ya se encuentra ingresado que se visualisa en la tabla archivos_procesados.
 
 #### b. `procesar_varios_excel.py`
-Versión extendida del anterior que procesa automáticamente todos los archivos `.xlsx` del directorio para distintas estaciones.
+Versión extendida del anterior que procesa automáticamente todos los archivos `.xlsx` del directorio para distintas estaciones muestra el ingreso en la tabla detalles_dia (exporta variaos exceles de varias estaciones).
 
 #### c. `generar_reporte_osinergmi_pdf.py`
 Genera un reporte mensual detallado de un producto para una estación específica en formato PDF.
+si quiere un reporte de otro producto o de otra estacion aqui puedes cambiar que se encuentra en el script:
+
+#### Filtros del reporte
+- estacion_id = 3       # America Soler
+- producto_id = 2       # GLP
+- año = 2025
+- mes = 3
+  
+- Nota: cambia el id de la estacion, id producto,  año y mes que usted requiere. 
 
 #### d. `generar_reporte_pdf_interactivo.py`
-Script de consola que permite al usuario elegir:
+Script de consola que permite al usuario elegir
 - Estación
 - Producto
 - Mes y Año
