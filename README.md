@@ -60,7 +60,8 @@ si quiere un reporte de otro producto o de otra estacion aqui puedes cambiar que
 - producto_id = 2       # GLP
 - año = 2025
 - mes = 3
-####Nota: cambia el id de la estacion, id producto,  año y mes que usted requiere. 
+  
+- Nota: cambia el id de la estacion, id producto,  año y mes que usted requiere. 
 
 #### d. `generar_reporte_pdf_interactivo.py`
 Script de consola que permite al usuario elegir
