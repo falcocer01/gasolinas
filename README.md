@@ -152,7 +152,7 @@ Este sistema fue diseñado para ayudar a operadores de estaciones de servicio a:
 - Optimizar el proceso de consolidación de datos multiestación.
 ---
 ## Créditos y contacto
-Desarrollado por: FREDY APOLINARIO ALCOCER  
-Fecha: Junio 2025  
-Contacto:fredyapolinario78@hotmail.com
-GitHub - falcocer01: https://github.com/falcocer01/gasolinas.git
+- Desarrollado por: FREDY APOLINARIO ALCOCER  
+- Fecha: Junio 2025  
+- Contacto:fredyapolinario78@hotmail.com
+- GitHub - falcocer01: https://github.com/falcocer01/gasolinas.git
