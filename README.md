@@ -10,9 +10,10 @@ Este proyecto tiene como objetivo centralizar y automatizar el proceso de carga 
 - ✅ Carga automatizada de archivos Excel por estación.
 - ✅ Registro de productos: GLP, PREMIUM, REGULAR y DB5.
 - ✅ Inserción en base de datos MariaDB.
-- ✅ Generación de reportes PDF diarios por estación.
+- ✅ Generación de reportes PDF diarios y mensuales por estación.
 - ✅ Diagrama de flujo del proceso.
 - ✅ Script de respaldo (`backup.sh`) para la base de datos.
+- 🖱️ Interfaz gráfica para generación de reportes con Tkinter.
 
 - 📂 Estructura del Proyecto
   
