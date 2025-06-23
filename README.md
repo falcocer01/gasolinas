@@ -55,7 +55,7 @@ Versión extendida del anterior que procesa automáticamente todos los archivos 
 Genera un reporte mensual detallado de un producto para una estación específica en formato PDF.
 si quiere un reporte de otro producto o de otra estacion aqui puedes cambiar que se encuentra en el script:
 
-# FILTROS DEL REPORTE
+#### Filtros del reporte
 estacion_id = 3       # America Soler
 producto_id = 2       # GLP
 anio = 2025
