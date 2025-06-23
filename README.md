@@ -154,5 +154,5 @@ Este sistema fue diseñado para ayudar a operadores de estaciones de servicio a:
 ## Créditos y contacto
 Desarrollado por: FREDY APOLINARIO ALCOCER  
 Fecha: Junio 2025  
-Contacto: fredyapolinario78@hotmail.com
+[Contacto:](fredyapolinario78@hotmail.com)
 [GitHub - falcocer01](https://github.com/falcocer01/gasolinas.git)
