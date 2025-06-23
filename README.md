@@ -97,9 +97,13 @@ Columnas clave importadas:
 ## Reportes Generados
 
 ### Ejemplos:
+
 - `reporte_America_Soler_GLP_2025_03.pdf`
+  
 - ![Imagen america](reporte_america.png)
+  
 - `reporte_La_America_DB5_2025-03-01_a_2025-03-31.xlsx`
+  
 - ![Imagen america excel](reporte_america_excel.png)
 
 Todos los reportes incluyen:
